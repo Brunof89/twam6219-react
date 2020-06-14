@@ -1,0 +1,14 @@
+footer{
+    text-align: right;
+}
+
+ul li{
+    list-style-type: none;
+    display: inline-block;
+    text-decoration: none;
+    /*padding-left: 72%;*/
+}
+
+li:hover{
+    text-decoration: underline;
+}

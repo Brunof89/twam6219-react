@@ -1,24 +1,40 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Route, NavLink, HashRouter } from "react-router-dom";
+import NavigationBar from "./pages/sitestruct/navigationbar/navigationBar.css";
+import Footer from "./pages/sitestruct/footer/Footer";
+import Home from "./pages/home/Home";
+import Filmes from "./pages/filmes/Filmes";
+import Novidades from "./pages/novidades/Novidades";
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <HashRouter>
+            <div className="navbar">
+                <div className="navLeft">
+                    <h1>Filmes e Séries - Conteúdos Online</h1>
+                </div>
+                <div className="navRightTop">
+                    <ul className="nav-item-lan">
+                        <a className="nav-link"><NavLink to="">PT</NavLink></a>
+                        <a className="nav-link"><NavLink to="">EN</NavLink></a>
+                    </ul>
+                </div>
+            </div>
+
+            <div>
+                <NavigationBar />
+
+                <div className="content">
+                    <Route exact path="/" component={Home} />
+                    <Route exact path="/" component={Filmes} />
+                    <Route exact path="/" component={Novidades} />
+                </div>
+            </div>
+
+            <Footer />
+        </HashRouter>
     </div>
   );
 }
