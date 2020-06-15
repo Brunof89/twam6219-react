@@ -8,7 +8,7 @@ class CoversRow extends Component{
         return(
 
             <div className="row">
-                <img src={this.props.movie.poster_src} width="120" alt="cover" />
+                <img src={this.props.movie.poster_src} width="120" alt={this.props.movie.title} />
 
                 <div className="column">
                     <div className="column">
@@ -18,6 +18,9 @@ class CoversRow extends Component{
                 </div>
 
             </div>
+            /*<div className="gallery-container">
+                <img id={this.props.movie.title} className="" src={this.props.movie.poster_src} alt={this.props.movie.title} />
+            </div>*/
 
         );
     }

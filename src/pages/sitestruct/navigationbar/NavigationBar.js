@@ -7,21 +7,30 @@ class NavigationBar extends Component {
 
     render() {
         return(
-            <div className="mainNavBar">
-                <nav className="navbar navbar-expand-md navbar-dark">
-                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavBar" aria-controls="mainNavBar" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"/>
-                    </button>
-                    <div className="collapse navbar-collapse">
-                        <div className="navbar-nav">
-                            <NavLink className="nav-item nav-link" exact to="/">Home</NavLink>
-                            <NavLink className="nav-item nav-link" to="/novidades">Novidades</NavLink>
-                            <NavLink className="nav-item nav-link" to="/filmes">Filmes</NavLink>
-                            <NavLink className="nav-item nav-link" to="/">Favoritos</NavLink>
-                        </div>
+            <nav className="navbar navbar-expand-md navbar-dark">
+                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavBar" aria-controls="mainNavBar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"/>
+                </button>
+
+                <div className="collapse navbar-collapse" id="mainNavBar">
+
+                    <div className="navRightTopLanguages">
+                        <ul className="nav-item-lan">
+                            <a className="nav-link" href="/">PT</a>
+                            <a className="nav-link" href="/">EN</a>
+                        </ul>
                     </div>
-                </nav>
-            </div>
+
+                    <div className="navRightMenuOption navbar-nav">
+                        <NavLink className="nav-item nav-link" exact to="/">Home</NavLink>
+                        <NavLink className="nav-item nav-link" to="/novidades">Novidades</NavLink>
+                        <NavLink className="nav-item nav-link" to="/filmes">Filmes</NavLink>
+                        <NavLink className="nav-item nav-link" to="/">Favoritos</NavLink>
+                    </div>
+
+                </div>
+
+            </nav>
         );
     }
 

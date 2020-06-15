@@ -12,15 +12,10 @@ function App() {
     <div className="App">
         <HashRouter>
             <div className="navbar">
-                <div className="navLeft">
-                    <h1>Filmes e Séries - Conteúdos Online</h1>
-                </div>
-                <div className="navRightTop">
-                    <ul className="nav-item-lan">
-                        <a className="nav-link"><NavLink to="">PT</NavLink></a>
-                        <a className="nav-link"><NavLink to="">EN</NavLink></a>
-                    </ul>
-                </div>
+                {/*<div className="navLeft">*/}
+                {/*    <h1>Filmes e Séries - Conteúdos Online</h1>*/}
+                {/*</div>*/}
+
             </div>
 
             <div>

@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'normalize.css/normalize.css';
-import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'jquery/dist/jquery.min';
 import 'bootstrap/dist/js/bootstrap.min';
 //import App from './App';
+import './index.css';
 import PageStruct from "./pages/sitestruct/PageStruct";
 import * as serviceWorker from './serviceWorker';
 
