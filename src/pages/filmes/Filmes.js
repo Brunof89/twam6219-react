@@ -11,9 +11,11 @@ export default class Filmes extends Component {
 
         this.state = {
             genres: [],
+
         };
 
         //this.getCategoriesFromAPI();
+        //this.getOptionSelected();
     }
 
     componentDidMount() {
@@ -27,8 +29,8 @@ export default class Filmes extends Component {
         });
     }
 
-    getOptionSelected(option){
-        console.log(option)
+    getOptionSelected = () => {
+        console.log('option: ');
     }
 
     render() {
@@ -38,12 +40,12 @@ export default class Filmes extends Component {
             <div>
                 <h2>Página Novidades - FAZER CSS!!</h2>
                 <p>Seleccione uma categoria</p>
-                <select className="form-control" id="categorySelectBox">
+                <select className="form-control mt-4 col-md-2 col-offset-4" id="categorySelectBox">
                     {genres.map( ({ id, name }) => (
                         <option key={id} id={id} value={name}> {name} </option>
                     ))}
                 </select>
-                <button className="btn btn-success btnSearchCategory" >Pesquisar</button>
+                <button className="btn btn-success btnSearchCategory" onClick={""}>Pesquisar</button>
                 <hr/>
                 <p>dfdfdf</p>
             </div>
